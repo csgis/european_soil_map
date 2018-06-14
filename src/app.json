@@ -1,0 +1,11 @@
+{
+	"modules": {
+		"getFeatureInfo": "@csgis/gb-leaflet/dist/getFeatureInfo",
+		"layers": "@csgis/gb-leaflet/dist/layers",
+		"scale": "@csgis/gb-leaflet/dist/scale",
+		"map": "@csgis/gb-leaflet/dist/map"
+	},
+	"deps": {
+		"scale": [ "map" ]
+	}
+}

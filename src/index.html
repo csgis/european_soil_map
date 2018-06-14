@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+  <link rel="manifest" href="manifest.json">
+  <title>DAI Viewer</title>
+  <style>
+    #loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.8) no-repeat center/50% 50% url(loading.svg);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loading"></div>
+
+  <div data-bricjs-component="map"></div>
+
+  <script src="bundle.js"></script>
+  <script>
+    App.run().then(() => document.getElementById('loading').style.display = 'none');
+  </script>
+</body>
+
+</html>

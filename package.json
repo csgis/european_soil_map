@@ -1,0 +1,37 @@
+{
+	"name": "dai-geonode-map-viewer",
+	"version": "1.0.0",
+	"dependencies": {
+		"@csgis/bricjs-loader": "^0.0.2",
+		"@csgis/gb-leaflet": "csgis/gb-leaflet",
+		"proj4leaflet": "^1.0.2"
+	},
+	"devDependencies": {
+		"@csgis/json-module-args-loader": "^0.0.2",
+		"@csgis/json-modules-loader": "^0.0.1",
+		"babel-cli": "^6.26.0",
+		"babel-core": "^6.26.0",
+		"babel-eslint": "^7.2.1",
+		"babel-loader": "^7.1.2",
+		"babel-preset-env": "^1.6.0",
+		"codecov": "^2.3.0",
+		"copy-webpack-plugin": "^4.1.1",
+		"css-loader": "^0.28.7",
+		"eslint": "^3.18.0",
+		"eslint-config-airbnb-es5": "^1.1.0",
+		"eslint-plugin-react": "^6.10.3",
+		"file-loader": "^1.1.5",
+		"style-loader": "^0.19.0",
+		"uglifyjs-webpack-plugin": "^1.0.0-beta.3",
+		"url-loader": "^0.6.2",
+		"webpack": "^3.6.0",
+		"webpack-archive-plugin": "^3.0.0",
+		"webpack-dev-server": "^2.9.1"
+	},
+	"scripts": {
+		"lint": "eslint src test",
+		"build": "webpack --env.production",
+		"start": "webpack-dev-server --compress --env.production",
+		"start:debug": "webpack-dev-server --debug"
+	}
+}
