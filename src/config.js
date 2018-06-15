@@ -4,19 +4,19 @@ import 'proj4leaflet';
 let maxResolution = 22381.5369193278; // from GeoServer grid set
 let resolutions = [];
 for (let i = 0; i < 8; i++) {
-  resolutions.push(maxResolution / (2**i));
+  resolutions.push(maxResolution / (2 ** i));
 }
 
 let crs = new L.Proj.CRS('EPSG:3035',
   '+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs', {
-    resolutions, 
+    resolutions,
     origin: [1896628.6179337814, 1097454.5685083764]
   });
 
 export default {
   'map': {
     'bounds': [ [39, 12], [75, 40] ],
-    'vendorOptions': { 
+    'vendorOptions': {
       crs,
       minZoom: 1,
       maxZoom: 6
@@ -29,7 +29,7 @@ export default {
     },
     'type': 'wms',
     'url': 'http://ows.mundialis.de/services/service',
-    'attribution': 'OSM Whatever'
+    'attribution': '© <a target="_blank" href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, WMS by <a target="_blank" href="https://www.mundialis.de/en/ows-mundialis/">mundialis</a>'
   }, {
     'id': 'soil',
     'params': {
